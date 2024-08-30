@@ -2,7 +2,7 @@ pipeline {
     agent { label 'Jenkins-Agent' }
     tools {
         jdk 'Java17'
-        maven 'maven3'
+        maven 'Maven3'
     }
     
     stages{
@@ -14,7 +14,7 @@ pipeline {
 
         stage("Checkout from SCM"){
                 steps {
-                    git branch: 'main', credentialsId: 'github', url: 'https://github.com/Shreeraksha45/register-app.git'
+                    git branch: 'main', credentialsId: 'github', url: 'https://github.com/Shreeraksha45/register-app'
                 }
         }
 
@@ -29,6 +29,6 @@ pipeline {
            steps {
                  sh "mvn test"
            }
-       }
-    }
+       }
+    }
 }
