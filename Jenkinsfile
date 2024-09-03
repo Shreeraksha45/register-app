@@ -92,7 +92,8 @@ pipeline {
                 script {
                     sh "curl -v -k --user Shreeraksha:${JENKINS-API-TOKEN} -X POST -H 'cache-control: no-cache' -H 'content-type: application/x-www-form-urlencoded' --data 'IMAGE_TAG=${IMAGE_TAG}' 'ec2-13-234-59-55.ap-south-1.compute.amazonaws.com:8080/job/gitops-register-app-cd/buildWithParameters?token=gitops-token'"
                 }
-            }
+
+	    }    
          }
 
     }
